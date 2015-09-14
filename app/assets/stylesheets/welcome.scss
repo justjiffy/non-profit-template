@@ -2,10 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "susy";
 
 body {
-	padding: 25px;
+	@include container(100%);
 }
+
+header {
+	position: fixed;
+	top: 0;
+}
+
+header#nav {
+	position: relative; 
+	bottom: 0;
+}
+
+header img {
+	margin: 0 auto;
+	display: block
+}
+
 img {
 	float: left;
 	padding: 0 25px;
