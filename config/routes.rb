@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   get '/contact' => 'welcome#contact'
 
   get '/login' => 'welcome#login'
-  get '/register' => 'welcome#register'
 
   get '/register' => 'users#new'
   post '/register' => 'users#create', as: :new_user
+
+  get '/events' => 'events#index'
 
 
 end
