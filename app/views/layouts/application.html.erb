@@ -10,7 +10,7 @@
 
 <header> 
 	<div id='login'>
-		<% if current_user and current_user.admin %> Signed in as <%= current_user.email %> | <%= link_to "Admin Panel", root_path %> | <%= link_to "Logout", '/logout' %>
+		<% if current_user and current_user.admin %> Signed in as <%= current_user.email %> | <%= link_to "Admin Panel", admin_path %> | <%= link_to "Logout", '/logout' %>
 		<% elsif current_user %>Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
 		<% else %>
 		  <%= link_to 'Login', '/login' %> | <%= link_to 'Register', '/register' %>

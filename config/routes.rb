@@ -17,5 +17,7 @@ Rails.application.routes.draw do
 
   get '/events' => 'events#index'
 
+  get '/admin' => 'admins#index', as: :admin
+
 
 end
