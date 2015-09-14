@@ -9,7 +9,12 @@
 <body>
 
 <header> 
-	<div id='login'><%= link_to "Login", "/login" %> | <%= link_to "Register", "/register" %>
+	<div id='login'>
+		<% if current_user %>
+		  <%= link_to "Logout", '/logout' %> | Signed in as <%= current_user.email %> 
+		<% else %>
+		  <%= link_to 'Login', '/login' %> | <%= link_to 'Register', '/register' %>
+		<% end %>
 	</div>
 
 	<div class="logo"><img class="header_image" src="http://logofaves.com/wp-content/uploads/2010/11/www_m.jpg" />

@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about'
   get '/contact' => 'welcome#contact'
 
-  get '/login' => 'welcome#login'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
 
   get '/register' => 'users#new'
   post '/register' => 'users#create', as: :new_user
