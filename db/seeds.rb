@@ -21,6 +21,30 @@ member = User.create([ { email: 'member@this.org',
 	donor: false, 
 	volunteer: false,} ])
 
+volunteer = User.create([ { email: 'volunteer@this.org', 
+	name: 'Volunteer', 
+	password: 'hi', 
+	admin: false, 
+	member: false, 
+	donor: false, 
+	volunteer: true,} ])
+
+donor = User.create([ { email: 'donor@this.org', 
+	name: 'Donor', 
+	password: 'hi', 
+	admin: false, 
+	member: false, 
+	donor: true, 
+	volunteer: false,} ])
+
+bob = User.create([ { email: 'bob@gmail.com', 
+	name: 'Bob', 
+	password: 'hi', 
+	admin: false, 
+	member: false, 
+	donor: false, 
+	volunteer: false,} ])
+
 post = Post.create([ { user_id: 1,
     title: 'We are preparing to launch!',
     body: 'This is going to be the coolest and most useful non-profit template site event built. I am so excited to be sharing this with the world! Please check back soon for more updates. 
