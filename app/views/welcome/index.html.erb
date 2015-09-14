@@ -7,11 +7,5 @@
   <li><%= f.name %> - <%= f.email %></li>
   <% end %>
 
-  <% @posts.each do |f| %>
-  <br>
- 	<h2><%= f.title %></h2>
-  <%= image_tag f.img %> <span><p>
-  <%= f.body %></p>
-  <% end %>
-
+<%= render "posts" %>
 </p>
