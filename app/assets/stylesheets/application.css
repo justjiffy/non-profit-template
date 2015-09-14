@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   max-width: 100%;
   margin-left: auto;
@@ -8,19 +12,81 @@ body {
     clear: both; }
 
 header {
-  position: fixed;
-  top: 0; }
-
-header#nav {
-  position: relative;
-  bottom: 0; }
-
-header img {
-  margin: 0 auto;
-  display: block; }
-
-img {
+  width: 100%;
   float: left;
+  margin-right: 5.26316%;
+  position: relative;
+  margin-bottom: 25px; }
+
+#login a, a:visited, a:active {
+  color: black;
+  text-decoration: none; }
+
+#login {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  float: left; }
+
+header .logo {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%; }
+
+header #nav {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: black;
+  color: white; }
+
+#nav a, a:visited, a:active {
+  color: white;
+  text-decoration: none; }
+
+.header_image {
+  display: block;
+  margin: 0 auto; }
+
+main {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 25px; }
+  main:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.main_image {
+  width: 70%;
+  float: left;
+  padding: 0 25px 10px 0; }
+
+.left {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+
+.right {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  float: right; }
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  background-color: #DDDDDD;
+  height: 250px;
+  margin-top: 25px;
+  padding: 25px; }
 
 /*# sourceMappingURL=application.css.map */

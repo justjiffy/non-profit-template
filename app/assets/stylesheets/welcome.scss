@@ -4,26 +4,80 @@
 
 @import "susy";
 
+* {	margin: 0;
+	padding: 0;
+}
+
 body {
 	@include container(100%);
 }
 
 header {
-	position: fixed;
-	top: 0;
+	@include span(100%);
+	position: relative;
+	margin-bottom: 25px;
 }
 
-header#nav {
-	position: relative; 
-	bottom: 0;
+#login a, a:visited, a:active {
+	color: black; 
+	text-decoration: none;
 }
 
-header img {
-	margin: 0 auto;
-	display: block
-}
-
-img {
+#login {
+	@include span(100%);	
 	float: left;
-	padding: 0 25px;
+}
+
+header .logo {
+	@include span(100%);
+}
+
+header #nav {
+	@include span(100%);
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+#nav a, a:visited, a:active {
+	color: white; 
+	text-decoration: none;
+}
+
+.header_image {
+	display: block;
+	margin: 0 auto;
+}
+
+main {
+	@include container(100%);
+	padding: 0 25px
+}
+
+.main_image {
+	width: 70%;
+	float: left;
+	padding: 0 25px 10px 0;
+}
+
+.left {
+	@include span(8 of 12);
+	display: inline;
+}
+
+.right {
+	@include span(3 of 12);
+	float: right;
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+	@include span(100%);
+	background-color: #DDDDDD;
+	height: 250px;
+	margin-top: 25px;
+	padding: 25px;
 }

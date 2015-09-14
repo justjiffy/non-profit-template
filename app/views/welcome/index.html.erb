@@ -1,11 +1,15 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
+<div class="left">
+	<%= render "posts" %>
+</div>
 
-  And the users that exist are: 
-  <% @users.each do |f| %>
-  <li><%= f.name %> - <%= f.email %></li>
-  <% end %>
+<div class="right">
+	<h2>Hello World</h2>
+	<p>
+	  The time is now: <%= Time.now %>
 
-<%= render "posts" %>
-</p>
+	  And the users that exist are: 
+	  <% @users.each do |f| %>
+	  <li><%= f.name %> - <%= f.email %></li>
+	  <% end %>
+	</p>
+</div>

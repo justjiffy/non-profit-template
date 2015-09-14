@@ -7,18 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header 
-	<div id='login'>
-	<%= link_to "Login", "/login" %> | <%= link_to "Register", "/register" %>
+
+<header> 
+	<div id='login'><%= link_to "Login", "/login" %> | <%= link_to "Register", "/register" %>
 	</div>
 
-	<img src="http://logofaves.com/wp-content/uploads/2010/11/www_m.jpg" />
+	<div class="logo"><img class="header_image" src="http://logofaves.com/wp-content/uploads/2010/11/www_m.jpg" />
+	</div>
 
-	<div id="nav">
-	<%= link_to "Home", root_path %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
+	<div id="nav"><%= link_to "Home", root_path %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
 	</div>
 </header>
+
+<main>
+
 <%= yield %>
+
+</main>
+
+<footer>
+	This is where all the links for the website will show under their varing columns. 
+</footer>
+
 
 </body>
 </html>

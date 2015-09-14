@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
  def index
  end
 
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
   	@user = User.create(user_params)
   	if @user.save
   		redirect_to root_path
-  	else redirect_to 'http://google.com'
+  	else redirect_to '/register'
   	end
  end
 

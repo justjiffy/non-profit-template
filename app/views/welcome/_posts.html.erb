@@ -1,6 +1,5 @@
   <% @posts.each do |f| %>
-  <br>
  	<h2><%= f.title %></h2>
-  <%= image_tag f.img %> <span><p>
+  <%= image_tag f.img, :class => "main_image" %><p>
   <%= f.body %></p>
   <% end %>
