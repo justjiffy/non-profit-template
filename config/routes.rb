@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get '/admin' => 'admins#index', as: :admin
 
-  get '/post' => 'posts#new'
-  post '/post' => 'posts#create', as: :new_post
+  get '/post' => 'admins#new', as: :post
+  post '/post' => 'admins#create', as: :new_post
 
 end

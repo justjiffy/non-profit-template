@@ -51,7 +51,8 @@ header #nav {
 
 .header_image {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 50px; }
 
 main {
   max-width: 100%;
