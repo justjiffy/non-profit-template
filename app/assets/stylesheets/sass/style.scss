@@ -67,6 +67,10 @@ main {
 	padding: 0 25px 10px 0;
 }
 
+#post a, a:visited, a:active {
+	color: #99999;
+}
+
 .left {
 	@include span(8 of 12);
 	display: inline;

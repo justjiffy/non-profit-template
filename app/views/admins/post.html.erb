@@ -3,7 +3,7 @@
 	
 	<h1>NEW POST!</h1>
 	
-	<%= form_for Post.new, url: new_post_path do |f| %>
+	<%= form_for :post, url: new_post_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
 	Image Link: <%= f.email_field :img %><br>  
 	Body: <%= f.text_area :body, size: "80x15"  %><br>

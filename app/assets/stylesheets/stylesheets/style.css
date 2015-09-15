@@ -82,6 +82,10 @@ main:after {
   padding: 0 25px 10px 0;
 }
 
+#post a, a:visited, a:active {
+  color: #99999;
+}
+
 .left {
   width: 66.10169%;
   float: left;
