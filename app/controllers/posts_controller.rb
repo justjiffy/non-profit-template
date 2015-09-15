@@ -1,24 +1,15 @@
 class PostsController < ApplicationController
-
-before_filter :authorize, :except => [:index, :show]
+include PostsHelper
+before_filter :check_if_admin, :except => [:index, :show]
 
 def index
 end
 
-# def check_if_admin
-#   if current_user.admin === true
-#     render :newpost
-#   else
-#     redirect_to root_path
-#   end
-# end
-
-# before_filter :check_if_admin
+def show
+end
 
 def new
  	@post = Post.new
- 	before_filter :check_if_admin
- 	render 'admins/post'
 end
 
  def create

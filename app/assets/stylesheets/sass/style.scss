@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "compass";
 @import "susy";
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-
+@import "sassybuttons";
 
 * {	margin: 0;
 	padding: 0;
@@ -89,9 +90,7 @@ footer {
 }
 
 button {
-	padding: 2px 5px;
-	margin: 15px 5px; 
-	font-size: 14px;
-	width: 300px; 
-	background-color: #fff9e8
+	margin: 10px;
+	width: 250px;
+	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
 }
