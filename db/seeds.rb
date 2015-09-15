@@ -46,13 +46,17 @@ bob = User.create([ { email: 'bob@gmail.com',
 	volunteer: false,} ])
 
 post = Post.create([ { user_id: 1,
-    title: 'We are preparing to launch!',
-    body: 'This is going to be the coolest and most useful non-profit template site event built. I am so excited to be sharing this with the world! Please check back soon for more updates. 
-
-	Oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead. Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead.
-
-    Thanks!!!',
-    tags: 'first, only',
+    title: "Aaaaaaaaand.... we're up!",
+    body: "This the first and only seeded entry for the website. All other content is user generated. 
+    
+    I am very excited to preset this.org, an open-source rails template designed for the needs of a small-mid sized non-profit organization. This project is available at a few different locations. 
+    
+    Please check the about section for links to the repository and other useful items. 
+    
+    This project was made in the General Assemble WDI - 5 cohort in Downtown Los Angeles by Juli Emmel (September 2015). 
+    
+    The pictures you are seeing are randomly generated from lorempixel",
+    tags: 'first, seed',
    	img: 'http://lorempixel.com/400/200/'} ])
 
 
