@@ -42,4 +42,11 @@ before_filter :check_if_admin, :except => [:index, :show]
 		redirect_to admin_path
 	end
 
+	    private
+
+    def event_params
+      params.require(:event).permit(:user_id, :date, :time, :location, :title, :body, :fee, :course)
+    end
+
+
 end

@@ -1,15 +1,8 @@
-<div id="post" style="text-align: center">
+<div id="post" class="main_narrow">
 
 	<h1>EDIT POST</h1>
-	
-	<%= form_for @edit_post, url: edit_post_path do |f| %>
-	Title: <%= f.text_field :title %><br>  
-	Image Link: <%= f.text_field :img %><br>  
-	Body: <%= f.text_area :body, size: "80x15"  %><br>
-	Tags: <%= f.text_field :tags %><br>
-
-	<%= f.submit "Edit Post" %>
-	<% end %>
+	 
+	<%= render "form" %>
 
 <%= link_to ("<button>DELETE POST</button>").html_safe, full_path, method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
 

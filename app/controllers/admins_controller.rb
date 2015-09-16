@@ -12,6 +12,10 @@ class AdminsController < ApplicationController
 	@posts = Post.all
  end
 
+ def events
+ 	@events = Event.all
+ end
+
  def create
  end
 

@@ -1,10 +1,4 @@
-<div id="event" class="main_narrow">
-	
-	<%= link_to ("<button>Edit Existing Event/Class</button>").html_safe, root_path %>
-
-	<h1>NEW EVENT!</h1>
-	
-	<%= form_for @event, url: edit_event_path do |f| %>
+<%= form_for Event.new, url: new_event_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
 	Location: <%= f.text_field :location %><br>
 	Date: <%= f.date_field :date %><br>  
@@ -15,5 +9,3 @@
 
 	<%= f.submit "Submit" %>
 	<% end %>
-
-</div>

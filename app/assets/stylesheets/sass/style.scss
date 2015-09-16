@@ -34,7 +34,6 @@ header {
 
 #login {
 	@include span(100%);	
-	float: left;
 }
 
 .logo {
@@ -71,6 +70,10 @@ main {
 	width: 70%;
 	float: left;
 	padding: 0 25px 10px 0;
+}
+
+.narrow {
+	background-color: blue
 }
 
 #post a, a:visited, a:active {

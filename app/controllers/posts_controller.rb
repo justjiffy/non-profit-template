@@ -30,7 +30,7 @@ before_filter :check_if_admin, :except => [:index, :show]
   def update
   	@post = Post.find(params[:id])
   	if @post.update_attributes(post_params)
-  		redirect_to :admin_path
+  		redirect_to admin_path
   	else
   		render :edit
   	end
