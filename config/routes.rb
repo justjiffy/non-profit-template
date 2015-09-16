@@ -31,5 +31,6 @@ Rails.application.routes.draw do
 
   delete 'show/:id' => 'posts#destroy'
 
+  get 'events/' => 'events#index'
 
 end

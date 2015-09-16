@@ -3,11 +3,11 @@ include AdminsHelper
 before_filter :check_if_admin, :except => [:index, :show]
 
 def index
-	@post = Post.all
+	@post = Post.all.sort_by(&:created_at)
 end
 
 def show
-	@posts = Post.all
+	@posts = Post.all.sort_by(&:created_at)
 	@post = Post.find(params[:id])
 end
 
