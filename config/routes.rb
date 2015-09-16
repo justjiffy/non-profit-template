@@ -29,5 +29,7 @@ Rails.application.routes.draw do
   get 'show/:id/edit' => 'posts#edit', as: :edit_post
   patch 'show/:id/edit' => 'posts#update'
 
+  delete 'show/:id' => 'posts#destroy'
+
 
 end

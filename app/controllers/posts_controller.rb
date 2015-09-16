@@ -30,7 +30,7 @@ end
   def update
   	@post = Post.find(params[:id])
   	if @post.update_attributes(post_params)
-  		redirect_to :back
+  		redirect_to :admin_path
   	else
   		render :edit
   	end
