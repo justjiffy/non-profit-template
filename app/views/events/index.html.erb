@@ -1,5 +1,9 @@
 <h1>Upcoming Events and Classes</h1>
 
-<p>This is where all the upcoming events and classes will be displayed</p>
+<p><% @all.each do |f| %>
+	<%= f.title %><br>
+	<%= f.location %> on <%= f.date %> at <%= f.time %>
+	<br><br>
+	<% end %>
+</p>
 
-<p>Users will be able to sort by date, or see only classes, or only events</p>

@@ -59,15 +59,5 @@ post = Post.create([ { user_id: 1,
     tags: 'first, seed',
    	img: 'http://lorempixel.com/400/200/'} ])
 
-event1 = Event.create([ { 
-	user_id: 1,
-    date: 2016-1-1,
-    time: "12:00",
-    location: "Online",
-    title: "Intro to this[dot]org and the rails framework",
-    body: "This is a webinar for anyone interested in the this.org template. It requires intermediate understanding of HTML/CSS, a text-edit (I'm using and reccomend Sublime Text 2 for compatibility. If you are unsure if this webinar is right for you, please see our FAQ section.",
-    fee: "FREE!",
-    class: true
-	}])
 
 

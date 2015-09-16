@@ -2,26 +2,26 @@ class PostsController < ApplicationController
 include AdminsHelper
 before_filter :check_if_admin, :except => [:index, :show]
 
-def index
-	@post = Post.all.sort_by(&:created_at)
-end
+  def index
+  @post = Post.all.sort_by(&:created_at)
+  end
 
-def show
-	@posts = Post.all.sort_by(&:created_at)
-	@post = Post.find(params[:id])
-end
+  def show
+  @posts = Post.all.sort_by(&:created_at)
+  @post = Post.find(params[:id])
+  end
 
-def new
- 	@post = Post.new
-end
+  def new
+  	@post = Post.new
+  end
 
- def create
+  def create
   	@post = Post.create(post_params)
   	if @post.save
   		redirect_to :back
   	else redirect_to :root_path
   	end
- end
+  end
 
   def edit
   	@edit_post = Post.find(params[:id])
@@ -39,17 +39,18 @@ end
   def all
   	@posts = Post.all
   end
-  
+
   def destroy
   	@post = Post.find(params[:id])
   	@post.destroy
   	redirect_to admin_path
   end
- private
+  
+    private
 
- def post_params
-	params.require(:post).permit(:user_id, :title, :body, :img, :tags)
- end
+    def post_params
+      params.require(:post).permit(:user_id, :title, :body, :img, :tags)
+    end
 
 
 end

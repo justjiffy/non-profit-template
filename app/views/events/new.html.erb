@@ -1,10 +1,10 @@
 <div id="post">
 	
-	<%= link_to ("<button>Edit Existing Post</button>").html_safe, 'show' %>
+	<%= link_to ("<button>Edit Existing Event/Class</button>").html_safe, root_path %>
 
-	<h1>NEW POST!</h1>
+	<h1>NEW EVENT!</h1>
 	
-	<%= form_for @post, url: new_post_path do |f| %>
+	<%= form_for @event, url: new_event_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
 	Image Link: <%= f.text_field :img %><br>  
 	Body: <%= f.text_area :body, size: "80x15"  %><br>
