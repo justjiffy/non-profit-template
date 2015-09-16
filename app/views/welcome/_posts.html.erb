@@ -1,7 +1,7 @@
   <% @posts.each do |f| %>
  	<h2><%= f.title %></h2>
-  <%= image_tag f.img, :class => "main_image" %><p>
-  <%= f.body %></p>
-  <p style="float: right"><%= link_to "# COMMENTS", root_path %> | <%= link_to "Full Post" %></p>
+  <%= image_tag f.img, :class => "main_image" %>
+  <p><%= f.body %></p>
+  <p style="text-align: right;"><%= link_to "# COMMENTS", root_path %> | <%= link_to "Full Post", full_path(f) %></p>
   <br><br><br>
   <% end %>

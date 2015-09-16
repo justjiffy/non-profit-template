@@ -5,6 +5,10 @@
   font-family: 'Karla', sans-serif;
 }
 
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
 body {
   max-width: 100%;
   margin-left: auto;
@@ -36,10 +40,8 @@ header {
   float: left;
 }
 
-header .logo {
-  width: 100%;
-  float: left;
-  margin-right: 5.26316%;
+.logo {
+  margin: 0 auto;
 }
 
 header #nav {
@@ -61,7 +63,8 @@ header #nav {
 .header_image {
   display: block;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 main {
@@ -83,7 +86,7 @@ main:after {
 }
 
 #post a, a:visited, a:active {
-  color: #99999;
+  color: blue;
 }
 
 .left {

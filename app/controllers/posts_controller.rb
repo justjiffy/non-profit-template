@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
-include PostsHelper
+include AdminsHelper
 before_filter :check_if_admin, :except => [:index, :show]
 
 def index
+	@post = Post.all
 end
 
 def show
+	@posts = Post.all
+	@post = Post.find(params[:id])
 end
 
 def new
@@ -20,7 +23,30 @@ end
   	end
  end
 
+  def edit
+  	@edit_post = Post.find(params[:id])
+  end
+
+  def update
+  	@post = Post.find(params[:id])
+  	if @post.update_attributes(post_params)
+  		redirect_to :back
+  	else
+  		render :edit
+  	end
+  end
+
+  def all
+  	@posts = Post.all
+  end
+  
+  def destroy
+  	@post = Post.find(params[:id])
+  	@post.destroy
+  	redirect_to admin_path
+  end
  private
+
  def post_params
 	params.require(:post).permit(:user_id, :title, :body, :img, :tags)
  end

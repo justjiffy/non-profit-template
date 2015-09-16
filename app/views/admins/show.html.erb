@@ -1,0 +1,6 @@
+<h1>Select the post you'd like to update</h1>
+<p>Sort by [title or date]</p>
+
+<% @posts.each do |f| %>
+	<li><%= link_to f.title, edit_path(f.id) %> - Date Created: <%= f.created_at %>, by: <%= f.user_id %></li>
+<% end %>

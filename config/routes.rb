@@ -4,22 +4,30 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get '/about' => 'welcome#about'
-  get '/contact' => 'welcome#contact'
+  get 'about/' => 'welcome#about'
+  get 'contact/' => 'welcome#contact'
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  get 'login/' => 'sessions#new'
+  post 'login/' => 'sessions#create'
 
-  get '/logout' => 'sessions#destroy'
+  get 'logout/' => 'sessions#destroy'
 
-  get '/register' => 'users#new'
-  post '/register' => 'users#create', as: :new_user
+  get 'register/' => 'users#new'
+  post 'register/' => 'users#create', as: :new_user
 
-  get '/events' => 'events#index'
+  get 'events/' => 'events#index'
 
-  get '/admin' => 'admins#index', as: :admin
+  get 'admin/show' => 'admins#show'
+  get 'admin/' => 'admins#index', as: :admin
 
-  get '/post' => 'posts#new', as: :post
-  post '/post' => 'posts#create', as: :new_post
+  get 'admin/post/' => 'posts#new', as: :post
+
+  post 'post/' => 'posts#create', as: :new_post
+
+  get 'show/:id' => 'posts#show', as: :full
+
+  get 'show/:id/edit' => 'posts#edit', as: :edit_post
+  patch 'show/:id/edit' => 'posts#update'
+
 
 end

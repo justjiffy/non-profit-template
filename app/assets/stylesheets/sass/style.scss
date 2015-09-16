@@ -12,6 +12,10 @@
 	font-family: 'Karla', sans-serif;
 }
 
+a, a:visited, a:active {
+	text-decoration: none;
+}
+
 body {
 	@include container(100%);
 }
@@ -21,6 +25,7 @@ header {
 	position: relative;
 	margin-bottom: 25px;
 }
+
 
 #login a, a:visited, a:active {
 	color: black; 
@@ -32,8 +37,8 @@ header {
 	float: left;
 }
 
-header .logo {
-	@include span(100%);
+.logo {
+	margin: 0 auto;
 }
 
 header #nav {
@@ -53,7 +58,8 @@ header #nav {
 .header_image {
 	display: block;
 	margin: 0 auto;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
+	text-align: center;
 }
 
 main {
@@ -68,7 +74,7 @@ main {
 }
 
 #post a, a:visited, a:active {
-	color: #99999;
+	color: blue;
 }
 
 .left {

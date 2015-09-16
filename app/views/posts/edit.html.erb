@@ -1,15 +1,13 @@
 <div id="post" style="text-align: center">
-	
-	<%= link_to ("<button>Edit Existing Post</button>").html_safe, 'show' %>
 
-	<h1>NEW POST!</h1>
+	<h1>EDIT POST</h1>
 	
-	<%= form_for @post, url: new_post_path do |f| %>
+	<%= form_for @edit_post, url: edit_post_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
 	Image Link: <%= f.text_field :img %><br>  
 	Body: <%= f.text_area :body, size: "80x15"  %><br>
 	Tags: <%= f.text_field :tags %><br>
 
-	<%= f.submit "Create Post" %>
+	<%= f.submit "Edit Post" %>
 	<% end %>
 </div>
