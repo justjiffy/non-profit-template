@@ -11,21 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150916181204) do
+ActiveRecord::Schema.define(version: 20150917170020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "post_id"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "post_id"
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "user_id"
     t.date     "date"
     t.time     "time"
     t.string   "location"
@@ -35,24 +34,25 @@ ActiveRecord::Schema.define(version: 20150916181204) do
     t.boolean  "course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "user_id"
     t.string   "title"
     t.text     "body"
     t.string   "tags"
     t.string   "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "rsvps", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "event_id"
     t.boolean  "volunteer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "event_id"
   end
 
   create_table "users", force: :cascade do |t|

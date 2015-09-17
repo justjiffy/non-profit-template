@@ -10,7 +10,7 @@ before_filter :check_if_admin, :except => [:index, :show]
     @posts = Post.all.sort_by(&:created_at)
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = Comment.where(:post_id => @post.id)
+    @comments = Comment.where(:post_id => @post)
   end
 
   def new

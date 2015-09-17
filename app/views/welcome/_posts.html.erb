@@ -1,9 +1,19 @@
   <% @posts.each do |f| %>
- <div style="clear: both">
- 	<h2><%= f.title %></h2>
-  <%= image_tag f.img, :class => "main_image" %>
-  <p><%= f.body %></p>
-  <p style="text-align: right;"><%= Comment.where(:post_id => f.id).count %> Comments | <%= link_to "See All...", full_path(f) %></p>
-  <br><br><br>
-</div>
+ 	
+ 	<div style="clear: both">
+ 	
+	 	<h2><%= f.title %></h2>
+	  	<%= image_tag f.img, :class => "main_image" %>
+	  	
+	  	<p><%= f.body %></p>
+		
+		<p style="text-align: right;">
+			<%= Comment.where(:post_id => f).count %> Comments | 
+			<%= link_to "See All...", full_path(f) %>
+		</p>
+	    
+	    <br><br><br>	
+		
+	</div>
+ 
   <% end %>
