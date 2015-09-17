@@ -1,10 +1,19 @@
 <h1>Upcoming Events and Classes</h1>
+<p>
+	  
+	  <% @events.each do |f| %>
+	  <strong><%= f.title %></strong> at 
+	  <strong><%= f.location %></strong> on 
+	  <strong><%= f.date %></strong> at <strong><%= f.time %></strong> 
+	  <% @event_id = f.id %> ( <%= Rsvp.where(:event_id => @event_id).count %> RSVPS )
+	  	
 
-<p><% @events.each do |f| %>
-	<strong><%= f.title %></strong> at 
-	<strong><%= f.location %></strong> on 
-	<strong><%= f.date %></strong> at <strong><%= f.time %></strong>
-	<br><br>
+	  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+		<%= f.hidden_field :event_id, :value => @event_id %>
+		<%= f.submit "RSVP", :class => 'button' %>  
+		<% end %>
+
 	<% end %>
 </p>
 

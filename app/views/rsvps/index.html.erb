@@ -1,0 +1,9 @@
+<h1>RSVP</h1>
+
+<% form_for @rsvp do |f| %>
+	Interested in volunteering? <%= f.check_box :volunteer %>
+	<%= f.hidden_field :user_id, value: => @current_user.id %>
+	<%= f.hidden_field :event_id, value: => @event[:id] %>
+
+	<%= f.submit %>
+	<% end %>

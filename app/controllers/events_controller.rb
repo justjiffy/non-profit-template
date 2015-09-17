@@ -4,6 +4,9 @@ before_filter :check_if_admin, :except => [:index, :show]
 
 	def index
 		@events = Event.all
+		@rsvp = Rsvp.new
+		# @event = Event.find(params[:id])
+		# @rsvps = Rsvp.where(:event_id => @event.id)
 	end
 
 	def show

@@ -195,6 +195,7 @@ button::-moz-focus-inner {
 }
 
 .button {
+  display: inline;
   margin: 10px;
   width: 250px;
   font-size: 16px;
