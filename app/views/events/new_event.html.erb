@@ -10,6 +10,6 @@
 	Course: <%= f.check_box :course %><br>
 	<%= f.hidden_field :user_id, :value => @current_user.id %><br><br>
 
-	<%= f.submit "Add Post" %>
+	<%= f.submit "Add Event", :class => 'button' %>
 <% end %>
 </div>

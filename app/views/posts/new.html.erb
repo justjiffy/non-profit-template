@@ -4,7 +4,7 @@
 
 </div>
   <% @posts.each do |f| %>
-       <li><%= link_to truncate(f.title, :length => 20, :separator => ' '), edit_post_path(f) %> | 
+       <li><strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", edit_post_path(f) %> | 
         <%= truncate(f.body, :length => 50, :separator => " ") %> | 
         (<%= f.created_at %> by <%= f.user.name %>)</li>
 

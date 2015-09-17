@@ -52,7 +52,7 @@ header {
 
 #login {
 	padding: 10px 0 0 25px;
-	width: 50%;
+	width: 100%;
 	float: left;	
 }
 
@@ -101,14 +101,14 @@ main {
 }
 
 .left {
-	@include span(8 of 12);
+	@include span(9 of 12);
 	display: inline;
 	padding-right: 20px;
 	border-right: 1px solid black;
 }
 
 .right {
-	@include span(4 last);
+	@include span(3 last);
 }
 
 footer {

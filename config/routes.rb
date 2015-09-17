@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   post 'login/' => 'sessions#create'
   get 'register/' => 'users#new'
   post 'register/' => 'users#create', as: :new_user
-  get 'posts/' => 'posts#index'
-  get 'events/' => 'events#index'
+  get 'posts/' => 'posts#index', as: :post_index
+  get 'events/' => 'events#index', as: :event_index
 
 
   #Available to ALL REGISTERED USERS  

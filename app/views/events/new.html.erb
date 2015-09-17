@@ -5,7 +5,7 @@
 </div>
   <% @events.each do |f| %>
        <li><%= f.date %> | 
-       	<%= link_to truncate(f.title, :length => 20, :separator => ' '), edit_event_path(f) %> | 
+       	<strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", edit_event_path(f) %> | 
         <%= truncate(f.body, :length => 50, :separator => " ") %> | 
         (<%= f.created_at %> by <%= f.user.name %>)
 

@@ -1,19 +1,19 @@
 <div class="left">
-	<h1>NEWS</h1>
+	<h1>NEWS</h1><br>
 	<%= render "posts" %>
 	<br><br>
 
-	<%= link_to "See All Posts", root_path %>
+	<%= link_to "See All Posts", post_index_path %>
 </div>
 
 <div class="right">
-	<h1>EVENTS / CLASSES</h1>
+	<h1>EVENTS / CLASSES</h1><br>
 	<p>
-	  <% @users.each do |f| %>
-	  <li><%= f.name %> - <%= f.email %></li>
+	  <% @events.each do |f| %>
+	  <li><strong><%= f.title %></strong> - <%= f.date %></li>
 	  <% end %>
 	  <br><br>
 
-	  <%= link_to "See All Events", root_path %>
+	  <%= link_to "See All Events", event_index_path %>
 	</p>
 </div>
