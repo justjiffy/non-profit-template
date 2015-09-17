@@ -3,12 +3,14 @@ include AdminsHelper
 before_filter :check_if_admin, :except => [:index, :show]
 
   def index
-  @post = Post.all.sort_by(&:created_at)
+    @post = Post.all.sort_by(&:created_at)
   end
 
   def show
-  @posts = Post.all.sort_by(&:created_at)
-  @post = Post.find(params[:id])
+    @posts = Post.all.sort_by(&:created_at)
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.where(:post_id => @post.id)
   end
 
   def new

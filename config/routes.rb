@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
 
   #Available to ALL REGISTERED USERS  
+  resources :comments
+  resources :rsvps
+  
   get 'logout/' => 'sessions#destroy'
 
   #Available to ADMIN ONLY

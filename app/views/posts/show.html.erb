@@ -1,2 +1,16 @@
-<h1><%= @post.title %></h1>
-<p><%= image_tag(@post.img, class: 'main_image') %><%= @post.body %></p>
+<div class="narrow">
+	<h1><%= @post.title %></h1>
+	<p><%= image_tag(@post.img, class: 'main_image') %><%= @post.body %></p>
+
+	<hr>
+
+	<%= render 'comments' %> 
+
+	<%= form_for @comment do |f| %>
+	<%= f.text_area :body, size: "80x15" %>
+	<%= f.hidden_field :user_id, :value => "1" %>
+	<%= f.hidden_field :post_id, :value => @post[:id] %> 
+	<%= f.submit %>
+	<% end %>
+
+</div>
