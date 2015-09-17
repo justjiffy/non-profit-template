@@ -18,16 +18,33 @@ $susy: (
 
 @include border-box-sizing; 
 
-.lists {
-  table {
-    $table-color: #7a98c6;
-    @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222);
-  }
-}
-
 * {	margin: 0;
 	padding: 0;
 	font-family: 'Karla', sans-serif;
+}
+
+h1 {
+	padding-bottom: 25px;
+}
+
+.rotate {
+text-align: center;
+float: left;
+z-index: -1;
+	/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 a, a:visited, a:active {
@@ -136,3 +153,21 @@ button {
 	width: 250px;
 	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
 }
+
+
+.event-what {
+	@include span(6 of 12);
+}
+
+.event-when {
+	@include span(2 of 12);
+}
+
+.event-where {
+	@include span(2 of 12);
+
+}
+.event-who {
+	@include span(2 last);
+}
+

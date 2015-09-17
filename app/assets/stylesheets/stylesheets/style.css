@@ -5,35 +5,30 @@
   box-sizing: border-box;
 }
 
-.lists table th {
-  background-color: white;
-}
-.lists table th.even, .lists table th:nth-child(2n) {
-  background-color: #dddddd;
-}
-.lists table tr.odd td, .lists table tr:nth-child(2n+1) td {
-  background-color: #98c67a;
-}
-.lists table tr.odd td.even, .lists table tr.odd td:nth-child(2n), .lists table tr:nth-child(2n+1) td.even, .lists table tr:nth-child(2n+1) td:nth-child(2n) {
-  background-color: #76a458;
-}
-.lists table tr.even td {
-  background-color: #7a98c6;
-}
-.lists table tr.even td.even, .lists table tr.even td:nth-child(2n) {
-  background-color: #5876a4;
-}
-.lists table tfoot th, .lists table tfoot td {
-  background-color: white;
-}
-.lists table tfoot th.even, .lists table tfoot th:nth-child(2n), .lists table tfoot td.even, .lists table tfoot td:nth-child(2n) {
-  background-color: #dddddd;
-}
-
 * {
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
+}
+
+h1 {
+  padding-bottom: 25px;
+}
+
+.rotate {
+  text-align: center;
+  float: left;
+  z-index: -1;
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 a, a:visited, a:active {
@@ -247,4 +242,28 @@ button::-moz-focus-inner {
 .button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
+}
+
+.event-what {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+.event-when {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+.event-where {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+.event-who {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
 }
