@@ -6,7 +6,24 @@
 @import "susy";
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 @import "sassybuttons";
+@import "compass/utilities/tables/alternating-rows-and-columns";
+ 
 
+$susy: (
+  columns: 12,
+  container: 1120px,
+  global-box-sizing: border-box 
+  );
+
+
+@include border-box-sizing; 
+
+.lists {
+  table {
+    $table-color: #7a98c6;
+    @include alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222222);
+  }
+}
 
 * {	margin: 0;
 	padding: 0;
@@ -18,11 +35,11 @@ a, a:visited, a:active {
 }
 
 body {
-	@include container(100%);
+	width: 100%
 }
 
 header {
-	@include span(100%);
+	width: 100%;
 	position: relative;
 	margin-bottom: 25px;
 }
@@ -34,7 +51,9 @@ header {
 }
 
 #login {
-	@include span(100%);	
+	padding: 10px 0 0 25px;
+	width: 50%;
+	float: left;	
 }
 
 .logo {
@@ -42,7 +61,7 @@ header {
 }
 
 header #nav {
-	@include span(100%);
+	width: 100%;
 	position: absolute;
 	bottom: 0;
 	text-align: center;
@@ -63,7 +82,7 @@ header #nav {
 }
 
 main {
-	@include container(100%);
+	@include container;
 	padding: 0 25px
 }
 
@@ -73,8 +92,8 @@ main {
 	padding: 0 25px 10px 0;
 }
 
-.narrow {
-	background-color: blue
+.main_narrow {
+	text-align: center;
 }
 
 #post a, a:visited, a:active {
@@ -89,14 +108,11 @@ main {
 }
 
 .right {
-	@include span(3 of 12);
-	float: right;
+	@include span(4 last);
 }
 
 footer {
-	position: relative;
-	bottom: 0;
-	@include span(100%);
+	width: 100%;
 	background-color: #DDDDDD;
 	height: 250px;
 	margin-top: 25px;

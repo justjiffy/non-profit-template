@@ -1,4 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.lists table th {
+  background-color: white;
+}
+.lists table th.even, .lists table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+.lists table tr.odd td, .lists table tr:nth-child(2n+1) td {
+  background-color: #98c67a;
+}
+.lists table tr.odd td.even, .lists table tr.odd td:nth-child(2n), .lists table tr:nth-child(2n+1) td.even, .lists table tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: #76a458;
+}
+.lists table tr.even td {
+  background-color: #7a98c6;
+}
+.lists table tr.even td.even, .lists table tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+.lists table tfoot th, .lists table tfoot td {
+  background-color: white;
+}
+.lists table tfoot th.even, .lists table tfoot th:nth-child(2n), .lists table tfoot td.even, .lists table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,19 +41,11 @@ a, a:visited, a:active {
 }
 
 body {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-body:after {
-  content: " ";
-  display: block;
-  clear: both;
+  width: 100%;
 }
 
 header {
   width: 100%;
-  float: left;
   position: relative;
   margin-bottom: 25px;
 }
@@ -33,9 +56,8 @@ header {
 }
 
 #login {
-  width: 100%;
-  float: left;
-  margin-right: 5.26316%;
+  padding: 10px 0 0 25px;
+  width: 50%;
   float: left;
 }
 
@@ -45,8 +67,6 @@ header {
 
 header #nav {
   width: 100%;
-  float: left;
-  margin-right: 5.26316%;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -67,7 +87,7 @@ header #nav {
 }
 
 main {
-  max-width: 100%;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 25px;
@@ -84,6 +104,10 @@ main:after {
   padding: 0 25px 10px 0;
 }
 
+.main_narrow {
+  text-align: center;
+}
+
 #post a, a:visited, a:active {
   color: blue;
 }
@@ -98,18 +122,13 @@ main:after {
 }
 
 .right {
-  width: 23.72881%;
-  float: left;
-  margin-right: 1.69492%;
+  width: 32.20339%;
   float: right;
+  margin-right: 0;
 }
 
 footer {
-  position: relative;
-  bottom: 0;
   width: 100%;
-  float: left;
-  margin-right: 5.26316%;
   background-color: #DDDDDD;
   height: 250px;
   margin-top: 25px;
