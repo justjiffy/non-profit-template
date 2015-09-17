@@ -1,0 +1,15 @@
+<div class="main_narrow">
+<h1>NEW EVENT!</h1>
+	<%= form_for @event, url: new_event_path do |f| %>
+	Title: <%= f.text_field :title %><br>  
+	Date: <%= f.date_field :date %><br>  
+	Time: <%= f.time_field :time %><br>  
+	Location: <%= f.text_field :location %><br>
+	Body: <%= f.text_area :body, size: "80x15"  %><br>
+	Fee: <%= f.text_field :fee %><br>
+	Course: <%= f.check_box :course %><br>
+	<%= f.hidden_field :user_id, :value => @current_user.id %><br><br>
+
+	<%= f.submit "Add Post" %>
+<% end %>
+</div>

@@ -12,14 +12,18 @@ before_filter :check_if_admin, :except => [:index, :show]
   end
 
   def new
-  	@post = Post.new
+    @posts = Post.all 
+  end
+
+  def new_post
+    @post = Post.new
   end
 
   def create
   	@post = Post.create(post_params)
   	if @post.save
-  		redirect_to :back
-  	else redirect_to :root_path
+  		redirect_to post_path
+  	else redirect_to root_path
   	end
   end
 
@@ -30,7 +34,7 @@ before_filter :check_if_admin, :except => [:index, :show]
   def update
   	@post = Post.find(params[:id])
   	if @post.update_attributes(post_params)
-  		redirect_to admin_path
+  		redirect_to post_path
   	else
   		render :edit
   	end
@@ -43,7 +47,7 @@ before_filter :check_if_admin, :except => [:index, :show]
   def destroy
   	@post = Post.find(params[:id])
   	@post.destroy
-  	redirect_to admin_path
+  	redirect_to post_path
   end
   
     private

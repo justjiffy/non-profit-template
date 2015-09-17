@@ -1,6 +1,12 @@
 <div id="post" class="main_narrow">
 	
-	<%= link_to ("<button>Add New Post</button>").html_safe, 'new_post' %>
-	<%= link_to ("<button>Edit Existing Post</button>").html_safe, 'show' %>
+	<%= link_to ("<button>Add New Post</button>").html_safe, '/admin/new_post' %>
 
+</div>
+  <% @posts.each do |f| %>
+       <li><%= link_to truncate(f.title, :length => 20, :separator => ' '), edit_post_path(f) %> | 
+        <%= truncate(f.body, :length => 50, :separator => " ") %> | 
+        (<%= f.created_at %> by <%= f.user.name %>)</li>
+
+        <% end %>
 </div>

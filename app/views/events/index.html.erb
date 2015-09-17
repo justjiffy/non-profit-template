@@ -1,8 +1,9 @@
 <h1>Upcoming Events and Classes</h1>
 
-<p><% @all.each do |f| %>
-	<%= f.title %><br>
-	<%= f.location %> on <%= f.date %> at <%= f.time %>
+<p><% @events.each do |f| %>
+	<strong><%= f.title %></strong> at 
+	<strong><%= f.location %></strong> on 
+	<strong><%= f.date %></strong> at <strong><%= f.time %></strong>
 	<br><br>
 	<% end %>
 </p>

@@ -124,3 +124,9 @@ button {
 	width: 250px;
 	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
 }
+
+.button {
+	margin: 10px;
+	width: 250px;
+	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
+}

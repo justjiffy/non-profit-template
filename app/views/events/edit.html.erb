@@ -1,8 +1,5 @@
 <div id="event" class="main_narrow">
-	
-	<%= link_to ("<button>Edit Existing Event/Class</button>").html_safe, root_path %>
-
-	<h1>NEW EVENT!</h1>
+	<h1>EDIT EVENT</h1>
 	
 	<%= form_for @event, url: edit_event_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
@@ -13,7 +10,8 @@
 	Fee: <%= f.text_field :fee %><br>
 	Class: <%= f.text_field :class %> <br><br>
 
-	<%= f.submit "Submit" %>
+	<%= f.submit "UPDATE EVENT", :class => 'button' %><br>
 	<% end %>
 
+<%= link_to ("<button>DELETE EVENT</button>").html_safe, detail_path, method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
 </div>
