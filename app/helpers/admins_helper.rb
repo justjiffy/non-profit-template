@@ -7,4 +7,12 @@ def check_if_admin
   end
 end
 
+def check_if_user
+	if current_user
+	else
+	  redirect_to '/register'
+	end
 end
+
+end
+

@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+	include AdminsHelper
+	before_filter :check_if_user
+
 	def index
 	end
 

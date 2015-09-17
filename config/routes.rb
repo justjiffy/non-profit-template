@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'contact/' => 'welcome#contact'
   get 'login/' => 'sessions#new'
   post 'login/' => 'sessions#create'
-  get 'register/' => 'users#new'
+  get 'register/' => 'users#new', as: :signup_path
   post 'register/' => 'users#create', as: :new_user
   get 'posts/' => 'posts#index', as: :post_index
   get 'events/' => 'events#index', as: :event_index
