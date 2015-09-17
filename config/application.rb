@@ -34,5 +34,7 @@ module Project2
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    #added to fix heroku deployment stylesheet issues
+    config.assets.precompile += ['style.css']
   end
 end
