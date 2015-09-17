@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'admin/' => 'admins#index', as: :admin
 
   get 'admin/events' => 'admins#events', as: :admin_event
+  get 'admin/users' => 'admins#users', as: :admin_user_path
 
   get 'admin/post/' => 'posts#new', as: :post
   get 'admin/new_post/' => 'posts#new_post'
