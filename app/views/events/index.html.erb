@@ -1,43 +1,41 @@
-<h1>Upcoming Events and Classes</h1>
+<h1>EVENTS / CLASSES</h1>
 
 <% @events.each do |f| %>
 <div class="container">	  
-	  <div class="what rotate"><h2 style="padding:0">WHAT</h2></div>
 	  <div class="event-what">
+		 <div class="when rotate"><h2>WHAT</h2></div>
 		  <strong><%= f.title %></strong><br>
 		  <%= f.body %>
 	  </div>
 
-	  <div class="when rotate"><h2>WHEN</h2></div>
 	  <div class="event-when">
-		<%= f.date.strftime("%A") %><br>
-		<strong><%= f.date.strftime("%b %d") %></strong><br>
-		<strong><%= f.time.strftime("%-I""%p") %></strong>
+	  	<div class="when rotate"><h2>WHEN</h2></div>
+			<%= f.date.strftime("%A") %><br>
+			<strong><%= f.date.strftime("%b %d") %></strong> - <strong><%= f.time.strftime("%-I""%p") %></strong>
 	  </div>
 
-	  <div class="where rotate"><h2>WHERE</h2></div>
 	  <div class="event-where">
-		<strong><%= f.location %></strong>
+	  	<div class="where rotate"><h2>WHERE</h2></div>
+			<strong><%= f.location %></strong>
 	  </div>
 	  
-		  <% @event_id = f.id %><% @rsvps = Rsvp.where(:event_id => @event_id).count %>
-	  
-	  <div style="margin-bottom:50px">	  
-		  <div class="who rotate"><h2>RSVPS (<%= @rsvps %>)</h2></div>
-			  <div class="event-who">
-
-			  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
-				<%= f.hidden_field :user_id, :value => current_user.id %>
-				<%= f.hidden_field :event_id, :value => @event_id %>
-				<%= f.submit "RSVPS", :class => 'button' %>  
-				<% end %>
-		  </div>
-	  </div>
-
+			<% @event_id = f.id %><% @rsvps = Rsvp.where(:event_id => @event_id).count %>
+	   <div class="event-who">
+		  <div class="who rotate"><h2>RSVPS</h2></div>
+		  	<strong>(<%= @rsvps %>)</strong><br>
+	   </div>
 </div>
 
-<hr style="margin: 50px 0">
-
+<div class="container">		<br><br>
+	<center>
+		  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :event_id, :value => @event_id %>
+			<%= f.submit "Click to RSVP", :class => 'button' %>  
+			<% end %>
+		</center>
+</div>
+<hr>
 <% end %>
 
 

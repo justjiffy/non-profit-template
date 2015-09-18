@@ -5,18 +5,13 @@
 @import "compass";
 @import "susy";
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import "sassybuttons";
-@import "compass/utilities/tables/alternating-rows-and-columns";
+@import "sassy-buttons";
  
 
 $susy: (
   columns: 12,
   container: 1120px,
-  global-box-sizing: border-box 
   );
-
-
-@include border-box-sizing; 
 
 * {	margin: 0;
 	padding: 0;
@@ -31,10 +26,11 @@ h2 {
     display: block;
     font-size: 1.5em;
     -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
+    -webkit-margin-after: 10px;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+    padding:0
 }
 
 .rotate {
@@ -130,14 +126,14 @@ main {
 }
 
 .left {
-	@include span(9 of 12);
-	display: inline;
-	padding-right: 20px;
+	@include span(8);
+	padding-right: 50px;
 	border-right: 1px solid black;
 }
 
 .right {
 	@include span(3 last);
+	position: relative;
 }
 
 footer {
@@ -150,41 +146,47 @@ footer {
 
 button {
 	margin: 10px;
-	width: 250px;
-	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
+	width: 175px;
+	@include sassy-button("shiny", 7px, 16px, #777777); 
+	@include sassy-button-style("push", #777777)
 }
+
 
 .button {
 	display: inline;
 	margin: 10px;
-	width: 250px;
-	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
+	width: 175px;
+	@include sassy-button("shiny", 7px, 16px, #777777); 
+	@include sassy-button-style("push", #777777)
 }
 
 .sm-button {
 	display: inline;
 	margin: 10px;
 	width: 50px;
-	@include sassy-button("shiny", 5px, 16px, #ffd71a, #ffaa1a);
 }
 
 .container {
-	display: table-cell;
 	vertical-align: bottom;
 	width: 100%;
-	padding-left: 50px;
-	}
+	margin: 50px;
+	display: block;
+	clear: both;
+	text-align: left;
+}
 
+.what { float: left; color: #d6d6d6}
+.event-what { width: 40%;;  float: left; }
 
-.what{ display: inline-block; text-align: left; color: #d6d6d6}
-.event-what { display: inline-block; text-align: left; width: 200px; vertical-align: bottom; }
+.when { float: left; color: #d6d6d6 }
+.event-when { width: 20%; float: left; }
 
-.when { display: inline-block; text-align: left; color: #d6d6d6 }
-.event-when { display: inline-block; text-align: left; vertical-align: bottom }
+.where { float: left; color: #d6d6d6}
+.event-where { width: 20%; float: left; }
 
-.where { display: inline-block; text-align: left; color: #d6d6d6}
-.event-where { display: inline-block; text-align: left;}
+.who { float: left; color: #d6d6d6}
+.event-who { width: 20%; float: left; }
 
-.who { position: absolute; right: 300px; color: #d6d6d6}
-.event-who { position: absolute; right: 50px; }
-
+.whobutton {
+	text-align:center; position:static; bottom:0; padding-bottom: 10px;
+}

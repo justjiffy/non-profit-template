@@ -3,7 +3,7 @@
 <head>
   <title>Project 2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag('style') %>
+<!--   <%= stylesheet_link_tag('style') %> -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -18,10 +18,10 @@
 		<% end %>
 	</div>
 
-	<div class="header_image"><%= image_tag('logo.jpg', class: "logo") %>
+	<div class="header_image"><%= image_tag('logo.png', class: "logo") %>
 	</div>
 
-	<div id="nav"><%= link_to "Home", root_path %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %> | <%= link_to "Events", '/events' %>
+	<div id="nav"><%= link_to "HOME", root_path %> | <%= link_to "ABOUT", "/about" %> | <%= link_to "CONTACT", "/contact" %> | <%= link_to "EVENTS", '/events' %>
 	</div>
 </header>
 

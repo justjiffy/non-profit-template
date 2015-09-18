@@ -1,17 +1,17 @@
 <h1><%= @post.title %></h1>
 
 <div class="narrow">
-	<p><%= image_tag(@post.img, class: 'main_image') %><%= @post.body %></p>
+	<p><%= image_tag(@post.img, class: 'main_image') %><%= @post.body %></p><br><br>
 
-	<hr>
 
 	<%= render 'comments' %> 
 
 	<%= form_for @comment do |f| %>
-	<%= f.text_area :body, size: "80x15" %>
+	<%= f.text_area :body, size: "100x15" %>
 	<%= f.hidden_field :user_id, :value => current_user.id %>
-	<%= f.hidden_field :post_id, :value => @post.id %> 
-	<%= f.submit %>
+	<%= f.hidden_field :post_id, :value => @post.id %><br><br>
+	<%= f.submit "Add Comment", :class => "button" %>
 	<% end %>
 
 </div>
+
