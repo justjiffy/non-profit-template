@@ -59,5 +59,15 @@ post = Post.create([ { user_id: 1,
     tags: 'first, seed',
    	img: 'http://lorempixel.com/400/200/'} ])
 
+event = Event.create([ {
+	user_id: 1,
+	title: "Launch Party!",
+	body: "Demo day is upon us... shall the app deploy to Heroku, or not!? ...only skills will tell...",
+	date: "Fri, 18 Sep 2015",
+	time: "2000-01-01 10:30:00 UTC",
+	location: "General Assembly",
+	fee: "Free!",
+	course: false,
+	}])
 
 
