@@ -10,7 +10,7 @@
 	<h1>EVENTS / CLASSES</h1><br>
 	<p>
 	  <% @events.each do |f| %>
-	  <li><strong><%= f.title %></strong> - <%= f.date %></li>
+	  <li><strong><%= f.title %></strong> - <%= f.date.strftime("%b %d") %></li>
 	  <% end %>
 	  <br><br>
 

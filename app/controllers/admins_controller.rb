@@ -10,6 +10,7 @@ class AdminsController < ApplicationController
 
  def show
 	@posts = Post.all
+	@users = User.all
  end
 
  def events

@@ -1,34 +1,43 @@
 <h1>Upcoming Events and Classes</h1>
 
-	  <% @events.each do |f| %>
-	  
+<% @events.each do |f| %>
+<div class="container">	  
+	  <div class="what rotate"><h2 style="padding:0">WHAT</h2></div>
 	  <div class="event-what">
-	  	  <span class="rotate"><h2>WHAT</h2></span>
 		  <strong><%= f.title %></strong><br>
 		  <%= f.body %>
 	  </div>
 
+	  <div class="when rotate"><h2>WHEN</h2></div>
 	  <div class="event-when">
-	  	<span class="rotate"><h2>WHEN</h2></span>
-	  	<center>
-	  	<%= f.date.strftime("%A") %><br>
-	  	<strong><%= f.date.strftime("%b %d") %></strong> <br>
-	  	<strong><%= f.time.strftime("%-I""%p") %></strong> at <strong><%= f.location %></strong>
-	  </center>
+		<%= f.date.strftime("%A") %><br>
+		<strong><%= f.date.strftime("%b %d") %></strong><br>
+		<strong><%= f.time.strftime("%-I""%p") %></strong>
 	  </div>
 
+	  <div class="where rotate"><h2>WHERE</h2></div>
+	  <div class="event-where">
+		<strong><%= f.location %></strong>
+	  </div>
+	  
+		  <% @event_id = f.id %><% @rsvps = Rsvp.where(:event_id => @event_id).count %>
+	  
+	  <div style="margin-bottom:50px">	  
+		  <div class="who rotate"><h2>RSVP</h2></div>
+			  <div class="event-who">
 
-	  <div class="event-rsvp">
-		  <% @event_id = f.id %> ( <%= Rsvp.where(:event_id => @event_id).count %> RSVPS )
-	  	
-
-	  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
-		<%= f.hidden_field :user_id, :value => current_user.id %>
-		<%= f.hidden_field :event_id, :value => @event_id %>
-		<%= f.submit "RSVP", :class => 'button' %>  
-		<% end %>
+			  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
+				<%= f.hidden_field :user_id, :value => current_user.id %>
+				<%= f.hidden_field :event_id, :value => @event_id %>
+				<%= f.submit @rsvps, :class => 'button' %>  
+				<% end %>
+		  </div>
 	  </div>
 
-	<% end %>
+</div>
+
+<hr style="margin: 50px 0">
+
+<% end %>
 
 
