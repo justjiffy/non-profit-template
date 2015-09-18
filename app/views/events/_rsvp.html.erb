@@ -1,0 +1,5 @@
+  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :event_id, :value => @event_id %>
+			<%= f.submit "Click to RSVP", :class => 'button' %>  
+			<% end %>
