@@ -1,5 +1,6 @@
 <% @comments.each do |f| %>
-<br><br><%= f.body %> <br><br>
+<br><br><%= f.body %><br>
+<span style="float: right"><em>(from <%= f.user.name %> on <%= f.created_at %>)<em></span><br><br>
 <% end %>
 
 <hr>

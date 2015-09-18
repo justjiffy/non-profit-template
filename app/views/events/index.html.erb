@@ -23,13 +23,13 @@
 		  <% @event_id = f.id %><% @rsvps = Rsvp.where(:event_id => @event_id).count %>
 	  
 	  <div style="margin-bottom:50px">	  
-		  <div class="who rotate"><h2>RSVP</h2></div>
+		  <div class="who rotate"><h2>RSVPS (<%= @rsvps %>)</h2></div>
 			  <div class="event-who">
 
 			  	<%= form_for @rsvp, url: 'rsvps' do |f| %>   
 				<%= f.hidden_field :user_id, :value => current_user.id %>
 				<%= f.hidden_field :event_id, :value => @event_id %>
-				<%= f.submit @rsvps, :class => 'button' %>  
+				<%= f.submit "RSVPS", :class => 'button' %>  
 				<% end %>
 		  </div>
 	  </div>

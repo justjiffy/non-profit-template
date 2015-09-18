@@ -54,7 +54,11 @@ ruby "2.2.0"
 
 gem 'sassy-buttons'
 
+gem 'mail_form'
+
 group :assets do
      gem 'compass-rails'
      gem 'compass'
    end
+
+
